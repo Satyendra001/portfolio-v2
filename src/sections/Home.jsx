@@ -6,8 +6,8 @@ import Tilt from "react-parallax-tilt";
 import { TypeAnimation } from "react-type-animation";
 import Lottie from "react-lottie-player";
 import animationData from "../lotties/person-coding.json";
-import { FiGithub, FiLinkedin, FiMail, FiArrowDown, FiCode } from "react-icons/fi";
-
+import { FiGithub, FiLinkedin, FiMail, FiArrowDown, FiCode, FiDownload } from "react-icons/fi";
+import resume from "../assets/resume.pdf"; // Adjust the path to your resume file
 const Home = () => {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -152,22 +152,41 @@ const Home = () => {
             learn and adapt to new challenges.
           </motion.p>
 
-          <motion.button
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.8 }}
-            className="relative inline-block px-8 py-4 font-medium group cursor-pointer"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            onClick={() => scrollToSection('projects')}
-          >
-            <span className="absolute inset-0 w-full h-full transition duration-200 ease-out transform translate-x-1 translate-y-1 bg-[#64ffda] group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
-            <span className="absolute inset-0 w-full h-full bg-[#0a192f] border-2 border-[#64ffda] group-hover:bg-[#64ffda]/10"></span>
-            <span className="relative text-[#64ffda] group-hover:text-[#ffffff]">
-              Check out my work!
-            </span>
+          <div className="flex gap-4">
+            <motion.button
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.8 }}
+              className="relative inline-block px-8 py-4 font-medium group cursor-pointer"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => scrollToSection('projects')}
+            >
+              <span className="absolute inset-0 w-full h-full transition duration-200 ease-out transform translate-x-1 translate-y-1 bg-[#64ffda] group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
+              <span className="absolute inset-0 w-full h-full bg-[#0a192f] border-2 border-[#64ffda] group-hover:bg-[#64ffda]/10"></span>
+              <span className="relative text-[#64ffda] group-hover:text-[#ffffff]">
+                Check out my work!
+              </span>
+            </motion.button>
 
-          </motion.button>
+            <motion.a
+              href={resume}// Add your resume file path here
+              download="Satyendra_Singh_Resume.pdf"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.9 }}
+              className="relative inline-block px-8 py-4 font-medium group cursor-pointer"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <span className="absolute inset-0 w-full h-full transition duration-200 ease-out transform translate-x-1 translate-y-1 bg-[#64ffda] group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
+              <span className="absolute inset-0 w-full h-full bg-[#0a192f] border-2 border-[#64ffda] group-hover:bg-[#64ffda]/10"></span>
+              <span className="relative text-[#64ffda] group-hover:text-[#ffffff] flex items-center gap-2">
+                <FiDownload />
+                Resume
+              </span>
+            </motion.a>
+          </div>
         </div>
 
         {/* Enhanced Tilt Component */}
