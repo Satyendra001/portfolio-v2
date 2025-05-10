@@ -14,7 +14,7 @@ const achievements = [
 
 const Achievements = () => {
   return (
-    <div className="max-w-4xl mx-auto">
+    <div className="max-w-7xl mx-auto py-20">
       <motion.h2 
         className="text-3xl font-bold text-[#ccd6f6] mb-12 flex items-center"
         initial={{ opacity: 0, x: -20 }}

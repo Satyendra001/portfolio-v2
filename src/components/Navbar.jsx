@@ -9,7 +9,7 @@ const Navbar = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
       
-      const sections = ['home', 'about', 'skills', 'skills & Experience', 'projects', 'achievements', 'contact'];
+      const sections = ['home', 'skills & Experience', 'education', 'projects', 'achievements', 'contact'];
       const current = sections.find(section => {
         const element = document.getElementById(section);
         if (element) {
@@ -49,7 +49,7 @@ const Navbar = () => {
             <span className="text-[#64ffda]">{`<S/S>`}</span>
           </motion.div>
           <div className="flex items-center space-x-8">
-            {['home', 'about', 'skills', 'skills & Experience', 'projects', 'achievements', 'contact'].map((item, index) => (
+            {['home', 'skills & Experience', 'education', 'projects', 'achievements', 'contact'].map((item, index) => (
               <motion.button
                 key={item}
                 initial={{ y: -20, opacity: 0 }}
@@ -69,6 +69,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
+    <div className='h-0.5 rounded-full bg-[grey] '/>
     </motion.nav>
   );
 };

@@ -9,6 +9,7 @@ import Achievements from './sections/Achievements';
 import Contact from './sections/Contact';
 import SkillsAndExperience from './sections/SkillsAndExperience';
 import './styles/animations.css';
+import Education from './sections/Education';
 
 export default function App() {
   useEffect(() => {
@@ -48,13 +49,14 @@ export default function App() {
             <SkillsAndExperience />
           </section>
           
-          <section id="about" className="min-h-screen py-20 section-reveal">
+          {/* <section id="about" className="min-h-screen py-20 section-reveal">
             <About />
-          </section>
+          </section> */}
           
-          <section id="skills" className="min-h-screen py-20 section-reveal">
-            <Skills />
+          <section id="education" className="min-h-screen py-20 section-reveal">
+            <Education />
           </section>
+
           
           <section id="projects" className="min-h-screen py-20 section-reveal">
             <Projects />

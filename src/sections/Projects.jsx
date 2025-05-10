@@ -1,55 +1,61 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FiGithub, FiExternalLink } from 'react-icons/fi';
+import chat from '../assets/chat.png';
+import chess from '../assets/chess.png';
+import wePlay from '../assets/wePlay.png';
+import tap from '../assets/tap.png';
+import flappy from '../assets/flappy.png';
+import go_oauth from '../assets/go-oauth.png';
 
 const projects = [
   {
-    title: "EasyCart",
-    description: "An e-commerce platform built with Next.js and Redux. Features include user authentication, product catalog, shopping cart, order management, and admin dashboard. Integrated with Stripe for secure payments.",
-    tech: ["Next.js", "Redux", "MongoDB", "Stripe", "Tailwind CSS"],
-    github: "https://github.com/Satyendra001/EasyCart",
-    live: "https://easy-cart-ten.vercel.app/",
-    image: "src/assets/chat.png"
-  },
-  {
-    title: "TalkTrove",
-    description: "A real-time chat application built with MERN stack and Socket.IO. Features include user authentication, real-time messaging, group chats, and file sharing capabilities.",
-    tech: ["React", "Node.js", "Socket.IO", "MongoDB", "Express"],
-    github: "https://github.com/Satyendra001/TalkTrove",
-    live: "https://talk-trove.vercel.app/",
-    image: "src/assets/chess.png"
-  },
-  {
-    title: "Workout-Tracker",
-    description: "A full-stack fitness tracking application with JWT authentication. Users can create, track, and manage their workout routines with detailed exercise logging and progress monitoring.",
-    tech: ["MERN Stack", "JWT", "Express", "MongoDB"],
-    github: "https://github.com/Satyendra001/workout-tracker-project",
+    title: "Chat Application",
+    description: "A simplistic chat application built using Node.js and React which enables real time messages using Sockets. Provides a realtime status of online and offline users.",
+    tech: ["React.js", "JavaScript", "Node.js", "WebSocket", "Tailwind CSS"],
+    github: "https://github.com/Satyendra001/ChatApp",
     live: "",
-    image: "src/assets/wePlay.png"
+    image: chat
   },
   {
-    title: "TaskBoard",
-    description: "A Kanban-style task management application built with React and Firebase. Features include drag-and-drop task management, real-time updates, and user collaboration.",
-    tech: ["React", "Firebase", "Material-UI"],
-    github: "https://github.com/Satyendra001/TaskBoard",
-    live: "https://taskboard-satyendra.vercel.app/",
-    image: "src/assets/flappy.png"
+    title: "Chess strategy game",
+    description: "A simple web API that provides information on the valid moves of chess pieces based on the current position of opponent pieces. Built in Python using Flask.",
+    tech: ["Python", "Falsk", "SQLite3", "Postman", "VSCode", "Git"],
+    github: "https://github.com/Satyendra001/ChessServer",
+    live: "",
+    image: chess
   },
   {
-    title: "TaskBoard",
-    description: "A Kanban-style task management application built with React and Firebase. Features include drag-and-drop task management, real-time updates, and user collaboration.",
-    tech: ["React", "Firebase", "Material-UI"],
-    github: "https://github.com/Satyendra001/TaskBoard",
-    live: "https://taskboard-satyendra.vercel.app/",
-    image: "src/assets/tap.png"
+    title: "Music player App",
+    description: "A fun and challenging project to get my hands dirty in Android dev. Got a good understanding of threading in Java and Android functionalities.",
+    tech: ["Java", "Android Studio", "App dev", "Firebase", "SQLite"],
+    github: "https://github.com/Satyendra001/MusicPlayer",
+    live: "",
+    image: wePlay
+  },
+  {
+    title: "Flappy Bird Game",
+    description: "A fun and interesting game Flappy Bird which is built in python using Pygame library. Understood game physics and usecase of python in gaming.",
+    tech: ["Python", "Pygame", "Git", "GameDev", "Git", "Algorithm"],
+    github: "https://github.com/Satyendra001/FlappyBirdie",
+    live: "",
+    image: flappy
+  },
+  {
+    title: "Utility App to Run Taps",
+    description: "A web app built to automate the manual QA tasks. It performs checks on latest changes in taps. Taps are scheduler that pulls data from data sources.",
+    tech: ["Python", "Django", "React", "Javascript", "MUI", "Docker"],
+    github: "https://github.com/Satyendra001/TapRunner-Utility",
+    live: "",
+    image: tap
   },
   {
     title: "GoOauth",
-    description: "A Kanban-style task management application built with React and Firebase. Features include drag-and-drop task management, real-time updates, and user collaboration.",
-    tech: ["React", "Firebase", "Material-UI"],
-    github: "https://github.com/Satyendra001/TaskBoard",
-    live: "https://taskboard-satyendra.vercel.app/",
-    image: "src/assets/tap.png"
+    description: "An OAuth Application server built in Golang. It provides a secure way to authenticate users and authorize third-party applications to access user data without sharing passwords.",
+    tech: ["Golang", "OAuth 2.0", "JWT", "PostgreSQL", "Docker"],
+    github: "https://github.com/Satyendra001/Go-OAuth",
+    live: "",
+    image: go_oauth
   }
 ];
 
@@ -57,7 +63,7 @@ const Projects = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   return (
-    <div className="max-w-6xl mx-auto px-4">
+    <div className="max-w-7xl mx-auto py-20">
       <motion.h2 
         className="text-3xl font-bold text-[#ccd6f6] mb-12 flex items-center"
         initial={{ opacity: 0, x: -20 }}
@@ -75,8 +81,6 @@ const Projects = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1 }}
             className="relative group"
-            onMouseEnter={() => setHoveredIndex(index)}
-            onMouseLeave={() => setHoveredIndex(null)}
           >
             <div className="relative bg-[#112240] rounded-lg overflow-hidden">
               {/* Project Image */}
@@ -102,7 +106,7 @@ const Projects = () => {
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-[#ccd6f6] hover:text-[#64ffda] transition-colors"
+                      className="text-[#ccd6f6] hover:text-[#64ffda] transition-colors cursor-pointer"
                       whileHover={{ y: -2 }}
                     >
                       <FiGithub size={20} />
@@ -130,7 +134,7 @@ const Projects = () => {
                     <span
                       key={i}
                       className="text-xs font-mono text-[#64ffda] px-2 py-1 rounded-full 
-                               border border-[#64ffda]/30 bg-[#64ffda]/5"
+                                border border-[#64ffda]/30 bg-[#64ffda]/5"
                     >
                       {tech}
                     </span>
@@ -138,12 +142,6 @@ const Projects = () => {
                 </div>
               </div>
 
-              {/* Hover Overlay */}
-              <motion.div
-                className="absolute inset-0 bg-[#64ffda]/5 opacity-0 
-                         transition-opacity duration-300"
-                animate={{ opacity: hoveredIndex === index ? 1 : 0 }}
-              />
             </div>
           </motion.div>
         ))}

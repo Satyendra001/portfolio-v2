@@ -25,10 +25,21 @@ const About = () => {
             custom Tumblr themes — turns out hacking together a custom reblog button taught
             me a lot about HTML & CSS!
           </p>
+          <p className="text-[#8892b0] mb-4">
+            Beyond web development, I have a deep passion for robotics. During my college years,
+            I was proud to be part of a National level winning ROBOCON team, where we pushed the
+            boundaries of innovation and engineering excellence.
+          </p>
+          <p className="text-[#8892b0] mb-4">
+            As a cybersecurity enthusiast, I regularly participate in Capture The Flag (CTF)
+            competitions and stay up-to-date with the latest vulnerability threats. This helps me
+            build more secure and robust applications.
+          </p>
           <p className="text-[#8892b0]">
-            Fast-forward to today, and I've had the privilege of working at various organizations.
-            My main focus these days is building accessible, inclusive products and digital
-            experiences.
+            When I'm not coding or hacking, you'll find me on the cricket field, immersed in the
+            latest anime series, exploring nature through hikes, or spending quality time with my
+            family. I believe in maintaining a healthy work-life balance that fuels my creativity
+            and problem-solving abilities.
           </p>
         </motion.div>
         

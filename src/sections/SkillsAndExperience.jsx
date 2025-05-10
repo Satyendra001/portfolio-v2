@@ -188,7 +188,7 @@ const SkillCategory = ({ category, skills }) => (
 
 const SkillsAndExperience = () => {
   return (
-    <div className="max-w-6xl mx-auto py-20 px-8">
+    <div className="max-w-7xl mx-auto py-20">
       <motion.h2
         className="text-3xl font-bold text-[#ccd6f6] mb-16 flex items-center"
         initial={{ opacity: 0, x: -20 }}
