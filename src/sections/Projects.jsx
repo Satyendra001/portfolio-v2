@@ -60,16 +60,15 @@ const projects = [
 ];
 
 const Projects = () => {
-  const [hoveredIndex, setHoveredIndex] = useState(null);
 
   return (
-    <div className="max-w-7xl mx-auto py-20">
+    <div className="max-w-7xl mx-auto">
       <motion.h2 
-        className="text-3xl font-bold text-[#ccd6f6] mb-12 flex items-center"
+        className="text-5xl font-bold text-[#ccd6f6] mb-15 flex items-center"
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
       >
-        <span className="text-[#64ffda] font-mono mr-2">03.</span>
+        <span className="text-[#64ffda] font-mono mr-2"></span>
         Some Things I've Built
       </motion.h2>
 

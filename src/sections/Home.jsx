@@ -15,6 +15,16 @@ const Home = () => {
     await loadSlim(engine);
   }, []);
 
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
   // lottie config
   const defaultOptions = {
     loop: true,
@@ -90,7 +100,7 @@ const Home = () => {
           <FiCode size={22} />
         </motion.a>
         <motion.a
-          href="mailto:satyendrasingh.tech01@gmail.com"
+          href="mailto:satyendrasingh10101@gmail.com"
           whileHover={{ y: -4, color: "#64ffda" }}
           className="text-[#8892b0] hover:text-[#64ffda] transition-colors"
         >

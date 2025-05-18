@@ -72,7 +72,8 @@ const experiences = [
       { name: "RabbitMQ", icon: <SiRabbitmq /> },
       { name: "Celery", icon: <SiCelery /> },
       { name: "GCP", icon: <SiGooglecloud /> },
-      { name: "GCP", icon: <SiPostgresql /> },
+      { name: "PostgreSQL", icon: <SiPostgresql /> },
+      {name: "Kubernetes", icon: <SiKubernetes />},
     ],
   },
   {
@@ -91,7 +92,7 @@ const experiences = [
       { name: "HTML", icon: <SiHtml5 /> },
       { name: "CSS", icon: <SiCss3 /> },
       { name: "MUI", icon: <SiMui /> },
-      { name: "MUI", icon: <SiKibana /> },
+      { name: "Kibana", icon: <SiKibana /> },
     ],
   },
   {
@@ -110,7 +111,6 @@ const experiences = [
       { name: "Git", icon: <FaGitAlt /> },
       { name: "GitHub", icon: <FaGithub /> },
       { name: "Bitbucket", icon: <FaBitbucket /> },
-      
     ],
   },
 ];
@@ -188,15 +188,15 @@ const SkillCategory = ({ category, skills }) => (
 
 const SkillsAndExperience = () => {
   return (
-    <div className="max-w-7xl mx-auto py-20">
-      <motion.h2
-        className="text-3xl font-bold text-[#ccd6f6] mb-16 flex items-center"
+    <div className="max-w-7xl mx-auto">
+      <motion.h1
+        className="text-5xl font-bold text-[#ccd6f6] mb-15 flex items-center"
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
       >
-        <span className="text-[#64ffda] font-mono mr-2">02.</span>
+        <span className="text-[#64ffda] font-mono mr-2"></span>
         Experience & Skills
-      </motion.h2>
+      </motion.h1>
 
       {/* Experience Section */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -223,15 +223,17 @@ const SkillsAndExperience = () => {
                   </li>
                 ))}
               </ul>
-              <div className="flex flex-wrap gap-2">
-                {exp.skills.map(({skill_name, icon}, i) => (
-
-                    <span
-                      key={i}
-                      className="text-xl font-mono text-[#8892b0] hover:text-[#64ffda] px-3 py-3 rounded border border-[#64ffda]/30 cursor-pointer"
-                    >
-                      {icon}
-                    </span>
+              <div className="flex flex-wrap gap-2 ">
+                {exp.skills.map(({ name, icon }, i) => (
+                  <div key={i} className="relative group">
+                  <span className="text-xl font-mono text-[#8892b0] hover:text-[#64ffda] px-3 py-3 rounded border border-[#64ffda]/30 cursor-pointer inline-flex items-center">
+                    {icon}
+                  </span>
+                  <span className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-xs text-[#64ffda] whitespace-nowrap px-2 py-1 ">
+                    {name}
+                  </span>
+                </div>
+                  
                 ))}
               </div>
             </motion.div>

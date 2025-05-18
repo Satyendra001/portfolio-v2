@@ -49,10 +49,6 @@ export default function App() {
             <SkillsAndExperience />
           </section>
           
-          {/* <section id="about" className="min-h-screen py-20 section-reveal">
-            <About />
-          </section> */}
-          
           <section id="education" className="min-h-screen py-20 section-reveal">
             <Education />
           </section>

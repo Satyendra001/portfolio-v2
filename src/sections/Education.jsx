@@ -4,6 +4,7 @@ import Lottie from 'react-lottie-player';
 import education from '../lotties/education.json'; // Import your Lottie animation file
 import ldce_logo from '../assets/ldce-logo.png'; // Import your logo file
 import images from '../assets/images.jpeg'; // Adjust the path as necessary
+
 // lottie config
 const defaultOptions = {
     loop: true,
@@ -35,7 +36,7 @@ const Education = () => {
       logo: images, // Add your logo path here
       description: "Focused on Physics, Chemistry, and Mathematics",
       achievements: [
-        "Percentage: 95%",
+        "Percentage: 91%",
         "School topper in Mathematics",
         "Active participant in science exhibitions"
       ]
@@ -45,11 +46,11 @@ const Education = () => {
   return (
     <div className="max-w-7xl mx-auto">
       <motion.h2 
-        className="text-3xl font-bold text-[#ccd6f6] mb-16 flex items-center"
+        className="text-5xl font-bold text-[#ccd6f6] mb-15 flex items-center"
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
       >
-        <span className="text-[#64ffda] font-mono mr-2">02.</span>
+        <span className="text-[#64ffda] font-mono mr-2"></span>
         Education
       </motion.h2>
 

@@ -4,23 +4,40 @@ import { FiAward } from 'react-icons/fi';
 
 const achievements = [
   {
-    title: "Achievement One",
-    organization: "Organization Name",
-    date: "2023",
-    description: "Description of the achievement and its significance."
+    title: "K8S deployment on GCP",
+    organization: "Infilect Technologies",
+    date: "2025",
+    description: "Deployed the entire Data Management Tool , which was developed by us, on GCP Kubernetes cluster. This made the tool more scalable and reliable where it can handle a huge load of users.",
   },
-  // Add more achievements...
+  {
+    title: "Leetcode top 4%",
+    organization: "Leetcode",
+    date: "2023",
+    description: "Was among the top 4% of Leetcode users in 2023 leetcode contest.",
+  },
+  {
+    title: "Robocon 2019 Winner",
+    organization: "Robocon LDCE",
+    date: "2019",
+    description: "Robocon is a national level robotics competition organized by the Asia-Pacific Broadcasting Union (ABU). We won the national level competition in 2019.",
+  },
+  {
+    title: "District topper in 12th",
+    organization: "GSEB",
+    date: "2018",
+    description: "I was the district topper in 12th standard in GSEB board with 92% marks. Awarded with Ishwar Buxani Trophy and a scholarship for the same.",
+  }
 ];
 
 const Achievements = () => {
   return (
-    <div className="max-w-7xl mx-auto py-20">
+    <div className="max-w-7xl mx-auto">
       <motion.h2 
-        className="text-3xl font-bold text-[#ccd6f6] mb-12 flex items-center"
+        className="text-5xl font-bold text-[#ccd6f6] mb-15 flex items-center"
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
       >
-        <span className="text-[#64ffda] font-mono mr-2">04.</span>
+        <span className="text-[#64ffda] font-mono mr-2"></span>
         Achievements
       </motion.h2>
 
