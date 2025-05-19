@@ -37,7 +37,9 @@ const Navbar = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-[#0a192f]/95 backdrop-blur-sm shadow-lg' : 'bg-transparent'
+        isScrolled 
+          ? 'bg-[#0a192f]/60 backdrop-blur-md border-b border-[#64ffda]/10' 
+          : 'bg-transparent'
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -69,7 +71,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-    <div className='h-0.5 rounded-full bg-[grey] '/>
+      <div className='h-0.5 rounded-full bg-[grey] '/>
     </motion.nav>
   );
 };
